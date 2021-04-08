@@ -1,0 +1,4 @@
+C:\Users\dylan\source\repos\Individual-Project\Individual-Project-Data\obj\Debug\netcoreapp3.1\Individual-Project-Data.csprojAssemblyReference.cache
+C:\Users\dylan\source\repos\Individual-Project\Individual-Project-Data\obj\Debug\netcoreapp3.1\Individual-Project-Data.AssemblyInfoInputs.cache
+C:\Users\dylan\source\repos\Individual-Project\Individual-Project-Data\obj\Debug\netcoreapp3.1\Individual-Project-Data.AssemblyInfo.cs
+C:\Users\dylan\source\repos\Individual-Project\Individual-Project-Data\obj\Debug\netcoreapp3.1\Individual-Project-Data.csproj.CoreCompileInputs.cache
