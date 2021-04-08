@@ -31,7 +31,7 @@ namespace IndividualProjectBusiness
             }
         }
 
-        public void Delete(int articleId, string title, string content, int teamPageId)
+        public void Delete(string articleId, string title, string authorName, string content)
         {
             using (var db = new SportsblogContext())
             {

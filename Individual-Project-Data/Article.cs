@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IndividualProjectData
 {
-    public class Article
+    public partial class Article
     {
         public string ArticleId { get; set; }
         public string Title { get; set; }
