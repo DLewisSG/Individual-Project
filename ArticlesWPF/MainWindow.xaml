@@ -44,6 +44,8 @@
                 <Button x:Name="ButtonUpdate" Grid.Row="4" Grid.Column="0" Background="#8db0e8" Content="Update" Click="ButtonUpdate_Click"/>
                 <Button x:Name="ButtonNew" Grid.Row="4" Grid.Column="1" Background="#8db0e8" Content="Create" Click="ButtonCreate_Click"/>
                 <Button x:Name="ButtonDelete" Grid.Row="5" Grid.Column="0" Background="#8db0e8" Content="Delete" Click="ButtonDelete_Click"/>
+                <Button x:Name="ButtonClose" Grid.Row="5" Grid.Column="1" Background="#8db0e8" Content="Close application" Click="ButtonClose_Click"/>
+
             </Grid>
         </Grid>
     </Grid>

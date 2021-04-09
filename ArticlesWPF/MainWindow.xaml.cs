@@ -68,13 +68,23 @@ namespace ArticlesWPF
             // put back the screen data
             PopulateListBox();
             ListBoxArticle.SelectedItem = _articleManager.SelectedArticle;
-
+            TextId.Text = string.Empty;
+            TextTitle.Text = string.Empty;
+            TextAuthorName.Text = string.Empty;
+            TextContent.Text = string.Empty;
         }
 
         private void ButtonCreate_Click(object sender, RoutedEventArgs e)
         {
             ArticleWindow articleWindow = new ArticleWindow();
             articleWindow.Show();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
         }
 
     }

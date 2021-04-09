@@ -43,7 +43,8 @@ namespace ProjectItTests
         {
             using (var db = new SportsblogContext())
             {
-                _articleManager.Create("Test", "Test Article", "Dylan Lewis", "This article is a test article.");
+                _articleManager.Create("Test", "Test Article", "Dylan Lewis", "This article is a test");
+
                 _articleManager.Update("Test", "Test Article", "Dylan Lewis", "This article is a test that has been updated.");
 
                 var updatedArticle = db.Articles.Find("Test");
@@ -63,6 +64,21 @@ namespace ProjectItTests
 
                 Assert.AreEqual(expected, result);
 
+            }
+        }
+
+        [Test]
+        public void WhenANewArticleIsDeleted_TheNumberOfArticlesDecreasesBy1()
+        {
+            using (var db = new SportsblogContext())
+            {
+                _articleManager.Create("Test", "Test Article", "Dylan Lewis", "This article is a test");
+                var numberOfArticlesBefore = db.Articles.Count();
+
+                _articleManager.Delete("Test", "Test Article", "Dylan Lewis", "This article is a test");
+                var numberOfArticlesAfter = db.Articles.Count();
+
+                Assert.AreEqual(numberOfArticlesBefore - 1, numberOfArticlesAfter);
             }
         }
 

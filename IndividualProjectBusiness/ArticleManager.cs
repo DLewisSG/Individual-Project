@@ -22,12 +22,16 @@ namespace IndividualProjectBusiness
         {
             using (var db = new SportsblogContext())
             {
-                SelectedArticle = db.Articles.Where(a => a.ArticleId == articleId).FirstOrDefault();
-                SelectedArticle.Title = title;
-                SelectedArticle.AuthorName = authorName;
-                SelectedArticle.Content = content;
-                // write changes to database
+                if (SelectedArticle != null)
+                {
+                    SelectedArticle = db.Articles.Where(a => a.ArticleId == articleId).FirstOrDefault();
+                    SelectedArticle.Title = title;
+                    SelectedArticle.AuthorName = authorName;
+                    SelectedArticle.Content = content;
+                    // write changes to database
+                }
                 db.SaveChanges();
+
             }
         }
 
@@ -35,8 +39,11 @@ namespace IndividualProjectBusiness
         {
             using (var db = new SportsblogContext())
             {
-
-                db.Articles.RemoveRange(SelectedArticle);
+                if (SelectedArticle != null)
+                {
+                    db.Articles.RemoveRange(SelectedArticle);
+                }
+    
                 db.SaveChanges();
             }
         }
