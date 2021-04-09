@@ -29,7 +29,17 @@ namespace ArticlesWPF
         private void ButtonCreate_Click(object sender, RoutedEventArgs e)
         {
             _articleManager.Create(TextId.Text, TextTitle.Text, TextAuthorName.Text, TextContent.Text);
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
 
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

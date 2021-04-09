@@ -40,6 +40,7 @@
                 <TextBox x:Name="TextContent" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
 
                 <Button x:Name="ButtonNew" Grid.Row="4" Grid.Column="1" Background="#8db0e8" Content="Create" Click="ButtonCreate_Click"/>
+                <Button x:Name="ButtonBack" Grid.Row="5" Grid.Column="1" Background="#8db0e8" Content="Back" Click="ButtonBack_Click"/>
             </Grid>
         </Grid>
     </Grid>

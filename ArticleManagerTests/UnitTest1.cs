@@ -39,7 +39,7 @@ namespace ProjectItTests
         }
 
         [Test]
-        public void WhenAnArticleIsChanged_TheDatabaseIsUpdated()
+        public void WhenTheSelectedArticleIsChanged_TheDatabaseIsUpdated()
         {
             using (var db = new SportsblogContext())
             {

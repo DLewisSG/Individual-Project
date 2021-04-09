@@ -78,6 +78,7 @@ namespace ArticlesWPF
         {
             ArticleWindow articleWindow = new ArticleWindow();
             articleWindow.Show();
+            this.Close();
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
