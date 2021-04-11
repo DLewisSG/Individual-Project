@@ -42,6 +42,7 @@ namespace IndividualProjectBusiness
                 if (SelectedArticle != null)
                 {
                     db.Articles.RemoveRange(SelectedArticle);
+                    SelectedArticle = null;
                 }
     
                 db.SaveChanges();

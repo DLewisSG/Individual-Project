@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArticlesWPF"
         mc:Ignorable="d"
-        Title="ArticleWindow" Height="450" Width="800">
+        Title="New Article Page" Height="450" Width="550">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -22,7 +22,6 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -32,14 +31,14 @@
                 <Label x:Name="LabelTitle" Grid.Row="1" Grid.Column="0" Background="Bisque">Title</Label>
                 <Label x:Name="LabelAuthorName" Grid.Row="2" Grid.Column="0" Background="Bisque">Author Name</Label>
                 <Label x:Name="LabelContent" Grid.Row="3" Grid.Column="0" Background="Bisque">Content</Label>
+                <Button x:Name="ButtonBack" Grid.Row="4" Grid.Column="0" Background="#8db0e8" Content="Back" Click="ButtonBack_Click"/>
+
 
                 <TextBox x:Name="TextId" Grid.Row="0" Grid.Column="1" Background="LightGreen"></TextBox>
                 <TextBox x:Name="TextTitle" Grid.Row="1" Grid.Column="1" Background="LightGreen"></TextBox>
                 <ComboBox x:Name="ComboAuthor" Grid.Row="2" Grid.Column="1"></ComboBox>
                 <TextBox x:Name="TextContent" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
-
                 <Button x:Name="ButtonNew" Grid.Row="4" Grid.Column="1" Background="#8db0e8" Content="Create" Click="ButtonCreate_Click"/>
-                <Button x:Name="ButtonBack" Grid.Row="5" Grid.Column="1" Background="#8db0e8" Content="Back" Click="ButtonBack_Click"/>
             </Grid>
         </Grid>
     </Grid>
