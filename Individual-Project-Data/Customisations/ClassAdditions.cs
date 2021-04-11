@@ -8,7 +8,15 @@ namespace IndividualProjectData
     {
         public override string ToString()
         {
-            return $"Article: {Title} Written by {AuthorName}";
+            return $"Article: {Title}";
+        }
+    }
+
+    public partial class Author
+    {
+        public override string ToString()
+        {
+            return AuthorName;
         }
     }
 }

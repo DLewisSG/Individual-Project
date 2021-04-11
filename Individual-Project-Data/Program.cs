@@ -70,7 +70,7 @@ namespace IndividualProjectData
                 db.SaveChanges();
             }
 
-            Console.WriteLine($"Added a new article by: '{authorName}'");
+            Console.WriteLine($"Added a new article");
         }
     }
 }

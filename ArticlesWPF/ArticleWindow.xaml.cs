@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 using IndividualProjectBusiness;
 
 namespace ArticlesWPF
@@ -24,11 +25,12 @@ namespace ArticlesWPF
 
         private void PopulateListBox()
         {
+            ComboAuthor.ItemsSource = _articleManager.Retrieve();
         }
 
         private void ButtonCreate_Click(object sender, RoutedEventArgs e)
         {
-            _articleManager.Create(TextId.Text, TextTitle.Text, TextAuthorName.Text, TextContent.Text);
+            _articleManager.Create(TextId.Text, TextTitle.Text, ComboAuthor.Text, TextContent.Text);
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();

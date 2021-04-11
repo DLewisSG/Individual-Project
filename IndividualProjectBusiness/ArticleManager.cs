@@ -56,6 +56,14 @@ namespace IndividualProjectBusiness
             }
         }
 
+        public List<Author> Retrieve()
+        {
+            using (var db = new SportsblogContext())
+            {
+                return db.Authors.ToList();
+            }
+        }
+
         public void SetSelectedArticle(object selectedItem)
         {
             SelectedArticle = (Article)selectedItem;

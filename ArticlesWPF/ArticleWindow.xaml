@@ -33,10 +33,9 @@
                 <Label x:Name="LabelAuthorName" Grid.Row="2" Grid.Column="0" Background="Bisque">Author Name</Label>
                 <Label x:Name="LabelContent" Grid.Row="3" Grid.Column="0" Background="Bisque">Content</Label>
 
-
                 <TextBox x:Name="TextId" Grid.Row="0" Grid.Column="1" Background="LightGreen"></TextBox>
                 <TextBox x:Name="TextTitle" Grid.Row="1" Grid.Column="1" Background="LightGreen"></TextBox>
-                <TextBox x:Name="TextAuthorName" Grid.Row="2" Grid.Column="1" Background="LightGreen"></TextBox>
+                <ComboBox x:Name="ComboAuthor" Grid.Row="2" Grid.Column="1"></ComboBox>
                 <TextBox x:Name="TextContent" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
 
                 <Button x:Name="ButtonNew" Grid.Row="4" Grid.Column="1" Background="#8db0e8" Content="Create" Click="ButtonCreate_Click"/>

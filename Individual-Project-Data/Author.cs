@@ -5,7 +5,7 @@ using System.Text;
 namespace IndividualProjectData
 
 {
-    public class Author
+    public partial class Author
     {
         public string AuthorId { get; set; }
         public string Username { get; set; }

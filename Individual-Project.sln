@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndividualProjectBusiness",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticleManagerTests", "ArticleManagerTests\ArticleManagerTests.csproj", "{DD2A0632-B172-407B-9C8C-FED243076115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticlesWPF", "ArticlesWPF\ArticlesWPF.csproj", "{AA4BF340-E8B4-4692-9D68-28E5A403A2A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticlesWPF", "ArticlesWPF\ArticlesWPF.csproj", "{AA4BF340-E8B4-4692-9D68-28E5A403A2A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
