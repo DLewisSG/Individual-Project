@@ -45,10 +45,30 @@ namespace ProjectItTests
             {
                 _articleManager.Create("Test", "Test Article", "Dylan Lewis", "This article is a test");
 
-                _articleManager.Update("Test", "Test Article", "Dylan Lewis", "This article is a test that has been updated.");
+                if (_articleManager.SelectedArticle != null)
+                {
+                    _articleManager.Update("Test", "Test Article", "Dylan Lewis", "This article is a test that has been updated.");
+                    var updatedArticle = db.Articles.Find("Test");
+                    Assert.AreEqual("This article is a test that has been updated.", updatedArticle.Content);
 
-                var updatedArticle = db.Articles.Find("Test");
-                Assert.AreEqual("This article is a test that has been updated.", updatedArticle.Content);
+                }
+            }
+        }
+
+        [Test]
+        public void WhenTheSelectedArticleAuthorIsChanged_TheDatabaseIsUpdated()
+        {
+            using (var db = new SportsblogContext())
+            {
+                _articleManager.Create("Test", "Test Article", "John Walker", "This article is a test");
+
+                if (_articleManager.SelectedArticle != null)
+                {
+                    _articleManager.Update("Test", "Test Article", "John Walker", "This article is a test that has been updated.");
+                    var updatedArticle = db.Articles.Find("Test");
+                    Assert.AreEqual("This article is a test that has been updated.", updatedArticle.Content);
+
+                }
             }
         }
 
@@ -75,10 +95,13 @@ namespace ProjectItTests
                 _articleManager.Create("Test", "Test Article", "Dylan Lewis", "This article is a test");
                 var numberOfArticlesBefore = db.Articles.Count();
 
-                _articleManager.Delete("Test", "Test Article", "Dylan Lewis", "This article is a test");
-                var numberOfArticlesAfter = db.Articles.Count();
+                if (_articleManager.SelectedArticle != null)
+                {
+                    _articleManager.Delete("Test", "Test Article", "Dylan Lewis", "This article is a test");
+                    var numberOfArticlesAfter = db.Articles.Count();
 
-                Assert.AreEqual(numberOfArticlesBefore - 1, numberOfArticlesAfter);
+                    Assert.AreEqual(numberOfArticlesBefore - 1, numberOfArticlesAfter);
+                }
             }
         }
 
