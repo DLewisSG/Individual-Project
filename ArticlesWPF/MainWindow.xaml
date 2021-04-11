@@ -20,7 +20,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row= "0">
-                    <ListBox x:Name="ListBoxArticle" Background="Beige"  Grid.Row="0" SelectionChanged="ListBoxArticle_SelectionChanged">
+                    <ListBox x:Name="ListBoxArticle" BorderThickness="2" BorderBrush="Black" Background="#E6FFFF"  Grid.Row="0" SelectionChanged="ListBoxArticle_SelectionChanged">
                     </ListBox>
                 </Grid>
                 
@@ -34,8 +34,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                    <Button x:Name="ButtonDelete" Grid.Row="1" Grid.Column="1" Background="#8db0e8" Content="Delete" Click="ButtonDelete_Click"/>
-                    <Button x:Name="ButtonClose" Grid.Row="1" Grid.Column="0" Background="#8db0e8" Content="Close" Click="ButtonClose_Click"/>
+                    <Button x:Name="ButtonDelete" BorderThickness="2" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Background="#04859D" Content="Delete" Click="ButtonDelete_Click"/>
+                    <Button x:Name="ButtonClose" BorderThickness="2" BorderBrush="Black" Grid.Row="1" Grid.Column="0" Background="#04859D" Content="Close" Click="ButtonClose_Click"/>
 
                 </Grid>
                 </Grid>
@@ -52,19 +52,19 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="LabelId" Grid.Row="0" Grid.Column="0" Background="Bisque" >Id</Label>
-            <Label x:Name="LabelTitle" Grid.Row="1" Grid.Column="0" Background="Bisque">Title</Label>
-            <Label x:Name="LabelAuthorName" Grid.Row="2" Grid.Column="0" Background="Bisque">Author Name</Label>
-            <Label x:Name="LabelContent" Grid.Row="3" Grid.Column="0" Background="Bisque">Content</Label>
+                <Label x:Name="LabelId" BorderThickness="2" BorderBrush="Black" Grid.Row="0" Grid.Column="0" Background="#37B6CE" >Id</Label>
+                <Label x:Name="LabelTitle" BorderThickness="2" BorderBrush="Black" Grid.Row="1" Grid.Column="0" Background="#37B6CE">Title</Label>
+                <Label x:Name="LabelAuthorName" BorderThickness="2" BorderBrush="Black" Grid.Row="2" Grid.Column="0" Background="#37B6CE">Author Name</Label>
+                <Label x:Name="LabelContent" BorderThickness="2" BorderBrush="Black" Grid.Row="3" Grid.Column="0" Background="#37B6CE">Content</Label>
 
 
-            <TextBox x:Name="TextId" Grid.Row="0" Grid.Column="1" Background="LightGreen" IsEnabled="False" IsReadOnlyCaretVisible="True"></TextBox>
-            <TextBox x:Name="TextTitle" Grid.Row="1" Grid.Column="1" Background="LightGreen"></TextBox>
-            <ComboBox x:Name="ComboAuthor" Grid.Row="2" Grid.Column="1"></ComboBox>
-            <TextBox x:Name="TextContent" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
+                <TextBox x:Name="TextId" Grid.Row="0" Grid.Column="1" Background="#E6FFFF" IsEnabled="False" IsReadOnlyCaretVisible="True"></TextBox>
+                <TextBox x:Name="TextTitle"  Grid.Row="1" Grid.Column="1" Background="#E6FFFF"></TextBox>
+                <ComboBox x:Name="ComboAuthor" Grid.Row="2" Grid.Column="1" Background="#E6FFFF"></ComboBox>
+                <TextBox x:Name="TextContent" Grid.Row="3" Grid.Column="1" Background="#E6FFFF"></TextBox>
 
-                <Button x:Name="ButtonNew" Grid.Row="5" Grid.Column="0" Background="#8db0e8" Content="Create" Click="ButtonCreate_Click"/>
-                <Button x:Name="ButtonUpdate" Grid.Row="5" Grid.Column="1" Background="#8db0e8" Content="Update" Click="ButtonUpdate_Click"/>
+                <Button x:Name="ButtonNew" BorderThickness="2" BorderBrush="Black" Grid.Row="5" Grid.Column="0" Background="#04859D" Content="Create" Click="ButtonCreate_Click"/>
+                <Button x:Name="ButtonUpdate" BorderThickness="2" BorderBrush="Black" Grid.Row="5" Grid.Column="1" Background="#04859D" Content="Update" Click="ButtonUpdate_Click"/>
 
             </Grid>
         </Grid>
