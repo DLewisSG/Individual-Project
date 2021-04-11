@@ -36,7 +36,8 @@ namespace ArticlesWPF
             {
                 TextId.Text = _articleManager.SelectedArticle.ArticleId;
                 TextTitle.Text = _articleManager.SelectedArticle.Title;
-                TextAuthorName.Text = _articleManager.SelectedArticle.AuthorName;
+                ComboAuthor.ItemsSource = _articleManager.Retrieve();
+                ComboAuthor.Text = _articleManager.SelectedArticle.AuthorName;
                 TextContent.Text = _articleManager.SelectedArticle.Content;
             }
         }
@@ -53,7 +54,7 @@ namespace ArticlesWPF
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
 
-            _articleManager.Update(TextId.Text, TextTitle.Text, TextAuthorName.Text, TextContent.Text);
+            _articleManager.Update(TextId.Text, TextTitle.Text, ComboAuthor.Text, TextContent.Text);
             ListBoxArticle.ItemsSource = null;
             // put back the screen data
             PopulateListBox();
@@ -63,14 +64,14 @@ namespace ArticlesWPF
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            _articleManager.Delete(TextId.Text, TextTitle.Text, TextAuthorName.Text, TextContent.Text);
+            _articleManager.Delete(TextId.Text, TextTitle.Text, ComboAuthor.Text, TextContent.Text);
             ListBoxArticle.ItemsSource = null;
             // put back the screen data
             PopulateListBox();
             ListBoxArticle.SelectedItem = _articleManager.SelectedArticle;
             TextId.Text = string.Empty;
             TextTitle.Text = string.Empty;
-            TextAuthorName.Text = string.Empty;
+            ComboAuthor.Text = string.Empty;
             TextContent.Text = string.Empty;
         }
 

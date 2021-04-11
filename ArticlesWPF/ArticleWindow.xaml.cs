@@ -20,10 +20,10 @@ namespace ArticlesWPF
         public ArticleWindow()
         {
             InitializeComponent();
-            PopulateListBox();
+            PopulateComboBox();
         }
 
-        private void PopulateListBox()
+        private void PopulateComboBox()
         {
             ComboAuthor.ItemsSource = _articleManager.Retrieve();
         }
