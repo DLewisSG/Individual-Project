@@ -66,7 +66,7 @@ namespace ArticleManagerTests
                 {
                     _articleManager.Update("Test", "Test Article", "John Walker", "This article is a test");
                     var updatedArticle = db.Articles.Find("Test");
-                    Assert.AreEqual("This article is a test that has been updated.", updatedArticle.Content);
+                    Assert.AreEqual("John Walker", updatedArticle.AuthorName);
 
                 }
             }
