@@ -60,11 +60,11 @@ namespace ProjectItTests
         {
             using (var db = new SportsblogContext())
             {
-                _articleManager.Create("Test", "Test Article", "John Walker", "This article is a test");
+                _articleManager.Create("Test", "Test Article", "Dylan Lewis", "This article is a test");
 
                 if (_articleManager.SelectedArticle != null)
                 {
-                    _articleManager.Update("Test", "Test Article", "John Walker", "This article is a test that has been updated.");
+                    _articleManager.Update("Test", "Test Article", "John Walker", "This article is a test");
                     var updatedArticle = db.Articles.Find("Test");
                     Assert.AreEqual("This article is a test that has been updated.", updatedArticle.Content);
 
