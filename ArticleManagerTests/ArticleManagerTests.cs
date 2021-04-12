@@ -3,7 +3,7 @@ using IndividualProjectBusiness;
 using IndividualProjectData;
 using System.Linq;
 
-namespace ProjectItTests
+namespace ArticleManagerTests
 {
     public class Tests
     {
