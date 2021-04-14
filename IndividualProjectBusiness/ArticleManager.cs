@@ -6,6 +6,8 @@ namespace IndividualProjectBusiness
 {
     public class ArticleManager
     {
+        public static void Main(string[] args)
+        {}
         public Article SelectedArticle { get; set; }
 
         public void Create(string articleId, string title, string authorName, string content)
@@ -28,13 +30,11 @@ namespace IndividualProjectBusiness
                     SelectedArticle.Title = title;
                     SelectedArticle.AuthorName = authorName;
                     SelectedArticle.Content = content;
-                    // write changes to database
                 }
                 db.SaveChanges();
 
             }
         }
-
         public void Delete(string articleId, string title, string authorName, string content)
         {
             using (var db = new SportsblogContext())
@@ -44,27 +44,17 @@ namespace IndividualProjectBusiness
                     db.Articles.RemoveRange(SelectedArticle);
                     SelectedArticle = null;
                 }
-    
                 db.SaveChanges();
             }
         }
-
         public List<Article> RetrieveAll()
         {
-            using (var db = new SportsblogContext())
-            {
-                return db.Articles.ToList();
-            }
+            using (var db = new SportsblogContext()) return db.Articles.ToList();
         }
-
-        public List<Author> Retrieve()
+        public List<Author> RetrieveAuthorName()
         {
-            using (var db = new SportsblogContext())
-            {
-                return db.Authors.ToList();
-            }
+            using (var db = new SportsblogContext()) return db.Authors.ToList();
         }
-
         public void SetSelectedArticle(object selectedItem)
         {
             SelectedArticle = (Article)selectedItem;
@@ -75,15 +65,7 @@ namespace IndividualProjectBusiness
             using (var db = new SportsblogContext())
             {
                 var findArticleByIdQuery = db.Articles.Where(ar => ar.ArticleId == articleId);
-
-                if (findArticleByIdQuery.Count() > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return findArticleByIdQuery.Count() > 0;
             }
         }
     }
