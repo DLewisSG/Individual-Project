@@ -5,6 +5,7 @@ namespace ArticlesWPF
 {
     public partial class ArticleWindow : Window
     {
+        public static void Main() { }
         private ArticleManager _articleManager = new ArticleManager();
         public ArticleWindow()
         {

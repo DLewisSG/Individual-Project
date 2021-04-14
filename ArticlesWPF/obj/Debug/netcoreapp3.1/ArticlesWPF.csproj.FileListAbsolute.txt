@@ -55,7 +55,6 @@ C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\bin\Debug\netcoreapp3
 C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\bin\Debug\netcoreapp3.1\IndividualProjectData.pdb
 C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\obj\Debug\netcoreapp3.1\ArticlesWPF.csprojAssemblyReference.cache
 C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\obj\Debug\netcoreapp3.1\ArticlesWPF_MarkupCompile.cache
 C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\obj\Debug\netcoreapp3.1\ArticlesWPF_MarkupCompile.lref
 C:\Users\dylan\source\repos\Individual-Project\ArticlesWPF\obj\Debug\netcoreapp3.1\ArticlesWPF.AssemblyInfoInputs.cache

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IndividualProjectData
+﻿namespace IndividualProjectData
 {
     public partial class Article
     {
